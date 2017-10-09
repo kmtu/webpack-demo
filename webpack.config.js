@@ -20,7 +20,8 @@ module.exports = {
     })
   ],
   output: {
-      filename: '[name].bundle.js',
-      path: path.resolve(__dirname, distName)
+    filename: '[name].bundle.js',
+    path: path.resolve(__dirname, distName),
+    publicPath: '/'
   },
 };
