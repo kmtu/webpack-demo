@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import './style.css';
 import Icon from './icon.svg';
+import Data from './data.xml';
 
 function component() {
   let element = document.createElement('div');
@@ -23,6 +24,8 @@ function component() {
   credit.appendChild(txtNode);
 
   element.appendChild(credit);
+
+  console.log(Data);
 
   return element;
 }
