@@ -4,8 +4,8 @@
   "description": "Personal Webpack practice",
   "main": "index.js",
   "scripts": {
-    "build": "node ./node_modules/.bin/webpack",
-    "watch": "node ./node_modules/.bin/webpack --watch",
+    "build": "webpack",
+    "watch": "webpack --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
