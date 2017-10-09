@@ -1,4 +1,11 @@
+@font-face {
+  font-family: 'MyFont';
+  src: url('./Nosifer-Regular.ttf') format('ttf');
+  font-weight: 600;
+  font-style: normal;
+}
+
 .hello {
   color: red;
-  /*background: url('./icon.svg');*/
+  font-family: 'MyFont';
 }
