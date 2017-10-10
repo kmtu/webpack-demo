@@ -14,6 +14,14 @@ module.exports = {
     contentBase: distName,
     hot: true
   },
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      }
+    ]
+  },
   plugins: [
     new CleanWebpackPlugin([distName]),
     new HtmlWebpackPlugin({
