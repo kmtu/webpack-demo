@@ -3,12 +3,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
-    app: './src/index.js',
-    print: './src/print.js'
+    index: './src/index.js',
+    another: './src/another-module.js'
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Output Management'
+      title: 'Code Splitting'
     })
   ],
   output: {
