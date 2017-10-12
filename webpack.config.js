@@ -6,11 +6,19 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 let distName = 'dist';
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    main: './src/index.js',
+    vendor: [
+      'lodash'
+    ]
+  },
   plugins: [
     new CleanWebpackPlugin([distName]),
     new HtmlWebpackPlugin({
       title: 'Caching'
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor'
     }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'runtime'
