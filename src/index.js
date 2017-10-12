@@ -1,10 +1,14 @@
-function component() {
-  let element = document.createElement('div');
+import _ from 'lodash';
+import numRef from './ref.json';
 
-  // Lodash, currently included via a script, is required for this line to work
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+export function numToWord(num) {
+  return _.reduce(numRef, (accum, ref) => {
+    return ref.num === num ? ref.word : accum;
+  }, '');
+};
 
-  return element;
+export function wordToNum(word) {
+  return _.reduce(numRef, (accum, ref) => {
+    return ref.word === word ? ref.num : accum;
+  }, -1);
 }
-
-document.body.appendChild(component());
