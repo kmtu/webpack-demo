@@ -22,7 +22,8 @@ module.exports = {
     }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'runtime'
-    })
+    }),
+    new webpack.NamedModulesPlugin()
   ],
   output: {
       filename: '[name].[chunkhash].js',
