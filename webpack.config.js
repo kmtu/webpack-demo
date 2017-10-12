@@ -5,18 +5,15 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 let distName = 'dist';
 
 module.exports = {
-  entry: {
-    app: './src/index.js',
-    print: './src/print.js'
-  },
+  entry: './src/index.js',
   plugins: [
     new CleanWebpackPlugin([distName]),
     new HtmlWebpackPlugin({
-      title: 'Output Management'
+      title: 'Caching'
     })
   ],
   output: {
-      filename: '[name].bundle.js',
+      filename: '[name].[chunkhash].js',
       path: path.resolve(__dirname, distName)
   },
 };
