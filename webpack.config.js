@@ -17,13 +17,13 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Caching'
     }),
+    new webpack.HashedModuleIdsPlugin(),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor'
     }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'runtime'
-    }),
-    new webpack.NamedModulesPlugin()
+    })
   ],
   output: {
       filename: '[name].[chunkhash].js',
